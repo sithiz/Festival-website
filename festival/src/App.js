@@ -9,9 +9,10 @@ import './App.css';
 class App extends Component {
 
     state = {
-      isHome : false,
+      isHome : true,
       isAbout: false,
-      isLineUp : false
+      isLineUp : false,
+      isInfo : false,
     }
   //* Need a Nav bar  and landing page
 
@@ -25,36 +26,55 @@ class App extends Component {
     this.setState({
       isHome : true,
       isAbout : false,
-      isLineUp : false
-
+      isLineUp : false,
+      isInfo : false
     })
-
   }
-  isAbout = () => {
+  isAboutClick = () => {
     this.setState({
       isHome : false, 
       isAbout : true,
-      isLineUp : false
+      isLineUp : false,
+      isInfo : false
     })
   }
-  isLineUp = () => {
+  isLineUpClick = () => {
     this.setState({
       isHome : false,
       isAbout : false,
-      isLineUp : true
-      
+      isLineUp : true,
+      isInfo : false
+    })
+  }
+  isInfoClick = () => {
+    this.setState({
+      isHome : false,
+      isAbout : false,
+      isLineUp : false,
+      isInfo : true
     })
   }
 
   render() {
+    let button = <div></div>
+        if(this.state.isHome){
+          button = <PlayBack />
+        } else if(this.state.isAbout){
+          button = <About />
+        } else if(this.state.isLineUp){
+          button = <Flyer />
+        }
+    
     return (
       <div className="Main-Container" >
         <Banner />
-        <NavBar />
-        <PlayBack />
-        <About />
-        <Flyer />
-
+        <NavBar 
+          isHomeClick={this.isHomeClick} 
+          isAboutClick={this.isAboutClick} 
+          isLineUpClick={this.isLineUpClick} 
+          isInfoClick={this.isInfoClick}
+        />
+        {button}
       </div>
 
 

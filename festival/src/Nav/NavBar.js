@@ -2,29 +2,39 @@ import React from 'react'
 import { Button } from 'semantic-ui-react'
 
 
-const ButtonSpawn = () =>(
+const ButtonSpawn = (props) =>(
       <div className="navagation">
         <Button 
           className="Nav-Button"
+          onClick={props.isHomeClick}
         > 
-          Nav 1
+          HOME
+        </Button>
+        <Button 
+          className="Nav-Button"
+          onClick={props.isLineUpClick}
+        > 
+          LINE UP
+        </Button>
+        <Button
+          className="Nav-Button"
+          onClick={props.isAboutClick}
+        > 
+          FESTIVAL ABOUT
         </Button>
         <Button
           className="Nav-Button"
         > 
-          Nav 2
-        </Button>
-        <Button
-          className="Nav-Button"
-        > 
-          Nav 3
-        </Button>
-        <Button
-          className="Nav-Button"
-        > 
-          Nav 4
+          GETTING HERE
         </Button>
       </div>
   )
 
 export default ButtonSpawn
+        
+
+
+
+
+
+
