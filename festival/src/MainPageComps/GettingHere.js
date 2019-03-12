@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,  Divider, Button } from 'semantic-ui-react'
 
-const GettingHere = () => (
+const GettingHere = (props) => (
 	<div className='Getting-Here'>
 		<div className='Left-Side-Info'>
 			<h1 className='Ticket-Title'> Tickets </h1>
@@ -13,7 +13,7 @@ const GettingHere = () => (
 					</Container>
 					<Container textAlign='right'>
 						<p>$$ 159.98</p>
-						<Button> 
+						<Button onClick={props.isMailingClick}> 
 						Buy Now
 						</Button>
 					</Container>
@@ -27,7 +27,7 @@ const GettingHere = () => (
 					</Container>
 					<Container textAlign='right'>
 						<p>$$ 259.98</p>
-						<Button> 
+						<Button onClick={props.isMailingClick}> 
 						Buy Now
 						</Button>
 					</Container>
@@ -41,7 +41,7 @@ const GettingHere = () => (
 					</Container>
 					<Container textAlign='right'>
 						<p>$$ 45.00</p>
-						<Button> 
+						<Button onClick={props.isMailingClick}> 
 						Buy Now
 						</Button>
 					</Container>
