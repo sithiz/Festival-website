@@ -36,30 +36,30 @@
   width:100%;
   display: flex;
   flex-direction: column;
+  background: radial-gradient(circle, orange, blue);
   
-  
-
 }
 .navagation {
   display:flex;
-  background-color:grey;
   height: 50px;
   width: 100%;
-
   justify-content: space-evenly;
+
 
 }
 .Nav-Button {
   font-size:24px;
-
+  background: rgba(232, 236, 241, .4);
 }
 .Play-Back {
   display:flex;
+  margin:5%;
   justify-content: center;
 }
 .Flyer{
   display:flex;
   justify-content: center;
+  padding:5%;
 }
 
 .About-Main {
@@ -70,3 +70,57 @@
   display: flex;
   justify-content: center;
 }
+.Getting-Here {
+  display:flex;
+  flex-direction:column;
+  margin:5px;
+  
+}
+.Getting-Here-Price {
+  margin: 8px;
+  margin-left:5%;
+  margin-right:5%;
+  padding:3%;
+  border: 1px solid rgba(211,211,211,.6);
+  background-color:rgba(232, 236, 241, 1);
+}
+.Ticket-Title {
+  display: flex;
+  justify-content: center;
+  color:rgba(232, 236, 241, 1); 
+}
+.Right-Side-Info{
+  display:flex;
+  justify-content: center;
+}
+.Map{
+  height:300px;
+}
+.Footer {
+  display:flex;
+  justify-content: center;
+  height:100px;
+  width:100%;
+  background-color: rgba(255,160,122,.6);
+  position: relative;
+  bottom: 0%;
+}
+.Footer-List {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Footer-Text {
+  color: rgba(0,0,0,.5)
+}
+.About-Main {
+  margin: 8px;
+  margin-left:5%;
+  margin-right: 5%;
+  padding:3%;
+  border: 1px solid rgba(211,211,211,.6);
+  background-color:rgba(232, 236, 241, 1);
+}
+
+

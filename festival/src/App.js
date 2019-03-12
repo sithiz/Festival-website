@@ -4,6 +4,9 @@ import PlayBack from './MainPageComps/VideoPlayBack'
 import About from './MainPageComps/About'
 import Flyer from './MainPageComps/Flyer-LineUp'
 import Banner from './MainPageComps/Banner'
+import GettingHere from './MainPageComps/GettingHere'
+import Footer from './Nav/Footer2'
+import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 
 class App extends Component {
@@ -14,7 +17,7 @@ class App extends Component {
       isLineUp : false,
       isInfo : false,
     }
-  //* Need a Nav bar  and landing page
+ 
 
 
 
@@ -63,6 +66,8 @@ class App extends Component {
           button = <About />
         } else if(this.state.isLineUp){
           button = <Flyer />
+        } else if( this.state.isInfo){
+          button = <GettingHere />
         }
     
     return (
@@ -75,9 +80,8 @@ class App extends Component {
           isInfoClick={this.isInfoClick}
         />
         {button}
+        <Footer />
       </div>
-
-
     );
   }
 }
