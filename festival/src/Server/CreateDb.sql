@@ -1,0 +1,6 @@
+CREATE DATABASE Festivities; 
+	CREATE TABLE Email_List (
+		ID SERIAL UNIQUE,
+		Email VARCHAR(100)
+	);
+
